@@ -2,6 +2,20 @@
 
 This repository contains a lambda function called by the Amazon Alexa skill called **Apple Buyer's Guide**. When executed the lambda function scrapes https://buyersguide.macrumors.com/ to extract MacRumor's recommendation for each Apple product (updated, neutral, caution, and outdated). It then allows Alexa to query this data through questions like, "Is now a good time to buy the iMac?"
 
+## Skill Description
+
+One-sentence: This skill helps you know whether it's a good time to buy a new Apple product by checking MacRumor's Buyer's Guide.
+
+Detailed: The Apple Buyer's Guide skill offers a convenient way to check whether it's a good time to buy a new Apple product. Through a real-time look at the MacRumor's Buyer's Guide, this skill allows Alexa to tell you which of four states an Apple product is in: updated, neutral, caution, and outdated. A product in the caution state, for example, has not been updated for quite some time, so it may be wise to be patient and wait for a new update. The status updated, on the other hand, means that the Apple product was just updated and you're safe to go ahead with the purchase.
+
+### Example Phrases
+
+* Alexa, launch Apple Buyer's Guide.
+    - Is now a good time to buy the airpods?
+    - iMac Pro.
+    - Should I buy the Apple TV?
+* Ask Apple Buyer's Guide is now a good time to buy the iMac?
+
 ## Running locally
 
 ```
