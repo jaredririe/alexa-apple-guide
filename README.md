@@ -1,20 +1,28 @@
-# Alexa Skill: Buyer's Guide for Apple
+# Alexa Skill: Picking Apples
 
-This repository contains a lambda function called by the Amazon Alexa skill called **Buyer's Guide for Apple**. When executed, the lambda function scrapes https://buyersguide.macrumors.com/ to extract MacRumors' recommendation for each Apple product (updated, neutral, caution, and outdated). It then allows Alexa to query this data through questions like, "Is now a good time to buy the iMac?"
+This repository contains a lambda function called by the Amazon Alexa skill called **Picking Apples**. When executed, the lambda function scrapes https://buyersguide.macrumors.com/ to extract MacRumors' recommendation for each Apple product (updated, neutral, caution, and outdated). It then allows Alexa to query this data through questions like, "Is now a good time to buy the iMac?"
 
 ## Skill Description
 
-One-sentence: This skill helps you know whether it's a good time to buy a new Apple product by checking the MacRumors Buyer's Guide.
+### One-sentence
 
-Detailed: The Buyer's Guide for Apple skill offers a convenient way to check whether it's a good time to buy a new Apple product. Through a real-time look at the [MacRumors Buyer's Guide](https://buyersguide.macrumors.com/), this skill allows Alexa to tell you which of four states an Apple product is in: updated, neutral, caution, and outdated. A product in the caution state, for example, has not been updated for quite some time, so it may be wise to be patient and wait for a new update. The status updated, on the other hand, means that the Apple product was just updated and you're safe to go ahead with the purchase.
+This skill helps you know whether it's a good time to buy a new Apple product by checking the MacRumors Buyer's Guide.
+
+### Detailed
+
+Picking Apples offers a convenient way to check whether it's a good time to buy a new Apple product. Through a real-time look at the MacRumors Buyer's Guide, this skill allows Alexa to tell you whether a product is recently updated, in the middle of its release cycle, somewhat out of date, or clearly outdated.
+
+The MacRumors Buyer's Guide is located at https://buyersguide.macrumors.com/.
+
+Note: this is an unofficial skill and not affiliated with or sponsored by Apple or MacRumors.
 
 ### Example Phrases
 
-* Alexa, launch Buyer's Guide for Apple.
+* Alexa, launch Picking Apples.
     - Is now a good time to buy the airpods?
     - iMac Pro.
     - Should I buy the Apple TV?
-* Ask Buyer's Guide for Apple is now a good time to buy the iMac?
+* Alexa, ask Picking Apples is now a good time to buy the iPhone XR?
 
 ## Running locally
 
