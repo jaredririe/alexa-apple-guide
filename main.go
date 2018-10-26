@@ -37,8 +37,8 @@ func handler(request alexa.Request) (alexa.Response, error) {
 	switch request.Body.Type {
 	case alexa.LaunchRequestType:
 		response = alexa.NewSimpleResponse(
-			"Apple Buyer's Guide",
-			"Welcome to Apple Buyer's Guide with data from MacRumors. You can ask me whether it's a good time to buy a particular Apple product. For example, you could ask 'is now a good time to buy the iMac?'",
+			"Buyer's Guide for Apple",
+			"Welcome to the Buyer's Guide for Apple with data from MacRumors. You can ask me whether it's a good time to buy a particular Apple product. For example, you could ask 'is now a good time to buy the iMac?'",
 			false,
 		)
 	case alexa.IntentRequestType:
