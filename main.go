@@ -36,7 +36,7 @@ func handler(request alexa.Request) (alexa.Response, error) {
 
 	switch request.Body.Type {
 	case alexa.LaunchRequestType:
-		response = alexa.NewSimpleResponse(
+		response = alexa.NewResponse(
 			"Picking Apples",
 			"Welcome to Picking Apples. You can ask me whether it's a good time to buy a particular Apple product. For example, you could ask 'is now a good time to buy the iMac?'",
 			false,
@@ -69,7 +69,7 @@ func dispatchIntents(request alexa.Request) alexa.Response {
 func handleRecommendation(request alexa.Request) alexa.Response {
 	product := request.Body.Intent.Slots["product"].Value
 
-	unknownProductResponse := alexa.NewSimpleResponse(
+	unknownProductResponse := alexa.NewResponse(
 		"Unknown product",
 		fmt.Sprintf("I'm not aware of the %s.", product),
 		false,
@@ -82,31 +82,31 @@ func handleRecommendation(request alexa.Request) alexa.Response {
 
 	switch status {
 	case scraper.Status.Updated:
-		return alexa.NewSimpleResponse(
+		return alexa.NewResponse(
 			"Just updated!",
 			fmt.Sprintf("Now is a great time to buy the %s! It was recently updated.", product),
-			false,
+			true,
 		)
 
 	case scraper.Status.Neutral:
-		return alexa.NewSimpleResponse(
+		return alexa.NewResponse(
 			"Neutral",
 			fmt.Sprintf("I'm neutral on the %s. It is in the middle of its usual release cycle.", product),
-			false,
+			true,
 		)
 
 	case scraper.Status.Caution:
-		return alexa.NewSimpleResponse(
+		return alexa.NewResponse(
 			"Caution",
 			fmt.Sprintf("I would use caution in purchasing the %s. It has been a long time since it was updated.", product),
-			false,
+			true,
 		)
 
 	case scraper.Status.Outdated:
-		return alexa.NewSimpleResponse(
+		return alexa.NewResponse(
 			"Outdated",
 			fmt.Sprintf("It's probably not a good idea to buy the %s. It is outdated. A new version may be released soon.", product),
-			false,
+			true,
 		)
 
 	case scraper.Status.Unknown:
@@ -116,16 +116,16 @@ func handleRecommendation(request alexa.Request) alexa.Response {
 }
 
 func handleHelp() alexa.Response {
-	return alexa.NewSimpleResponse(
+	return alexa.NewResponse(
 		"Help",
-		fmt.Sprintf("You can ask me whether it's a good time to buy a particular Apple product. For example, you could ask 'is now a good time to buy the iMac?' You can also simply say the name of a product. I'm aware of the following Apple products: %s.",
-			strings.Join(knownProducts, ", ")),
+		fmt.Sprintf("You can ask me whether it's a good time to buy a particular Apple product. For example, you could ask 'is now a good time to buy the iMac?' You can also simply say the name of a product. Here are some of the Apple products I know about: %s. What product are you interested in?",
+			strings.Join(knownProducts[:8], ", ")),
 		false,
 	)
 }
 
 func handleStop() alexa.Response {
-	return alexa.NewSimpleResponse(
+	return alexa.NewResponse(
 		"Bye!",
 		"Best of luck!",
 		true,
@@ -133,7 +133,7 @@ func handleStop() alexa.Response {
 }
 
 func handleFallback() alexa.Response {
-	return alexa.NewSimpleResponse(
+	return alexa.NewResponse(
 		"I don't quite understand",
 		"I can't help you with that. Try rephrasing your question or ask for help by saying 'help'",
 		false,

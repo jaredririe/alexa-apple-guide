@@ -1,6 +1,6 @@
-# Alexa Skill: Picking Apples
+# Alexa Skill: Picking Apples (Unofficial)
 
-This repository contains a lambda function called by the Amazon Alexa skill called **Picking Apples**. When executed, the lambda function scrapes https://buyersguide.macrumors.com/ to extract MacRumors' recommendation for each Apple product (updated, neutral, caution, and outdated). It then allows Alexa to query this data through questions like, "Is now a good time to buy the iMac?"
+This repository contains a lambda function called by the Amazon Alexa skill called **Picking Apples (Unofficial)**. When executed, the lambda function scrapes https://buyersguide.macrumors.com/ to extract MacRumors' recommendation for each Apple product (updated, neutral, caution, and outdated). It then allows Alexa to query this data through questions like, "Is now a good time to buy the iMac?"
 
 ## Skill Description
 
@@ -10,11 +10,11 @@ This skill helps you know whether it's a good time to buy a new Apple product by
 
 ### Detailed
 
-Picking Apples offers a convenient way to check whether it's a good time to buy a new Apple product. Through a real-time look at the MacRumors Buyer's Guide, this skill allows Alexa to tell you whether a product is recently updated, in the middle of its release cycle, somewhat out of date, or clearly outdated.
+Note: this is an unofficial skill and not affiliated with or sponsored by Apple or MacRumors.
+
+Picking Apples (Unofficial) offers a convenient way to check whether it's a good time to buy a new Apple product. Through a real-time look at the MacRumors Buyer's Guide, this skill allows Alexa to tell you whether a product is recently updated, in the middle of its release cycle, somewhat out of date, or clearly outdated.
 
 The MacRumors Buyer's Guide is located at https://buyersguide.macrumors.com/.
-
-Note: this is an unofficial skill and not affiliated with or sponsored by Apple or MacRumors.
 
 ### Example Phrases
 
@@ -23,6 +23,7 @@ Note: this is an unofficial skill and not affiliated with or sponsored by Apple 
     - iMac Pro.
     - Should I buy the Apple TV?
 * Alexa, ask Picking Apples is now a good time to buy the iPhone XR?
+* ask picking apples to tell me if it's a good time to buy the iphone xr
 
 ## Running locally
 

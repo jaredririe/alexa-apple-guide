@@ -1,8 +1,8 @@
 package alexa
 
-// NewSimpleResponse builds a simple response. The session can
+// NewResponse builds a simple response. The session can
 // be optionally ended by setting 'endSession' to true.
-func NewSimpleResponse(title string, text string, endSession bool) Response {
+func NewResponse(title, text string, endSession bool) Response {
 	r := Response{
 		Version: "1.0",
 		Body: ResBody{
@@ -18,6 +18,19 @@ func NewSimpleResponse(title string, text string, endSession bool) Response {
 			ShouldEndSession: endSession,
 		},
 	}
+	return r
+}
+
+// NewResponseWithReprompt builds a simple response and adds a reprompt.
+func NewResponseWithReprompt(title, text, reprompt string) Response {
+	r := NewResponse(title, text, false)
+	r.Body.Reprompt = &Reprompt{
+		OutputSpeech: Payload{
+			Type: "PlainText",
+			Text: reprompt,
+		},
+	}
+
 	return r
 }
 
