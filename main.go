@@ -75,9 +75,14 @@ func handleRecommendation(request alexa.Request) alexa.Response {
 		false,
 	)
 
-	status, ok := nameToStatus[strings.ToLower(product)]
+	lowercaseProduct := strings.ToLower(product)
+	status, ok := nameToStatus[lowercaseProduct]
 	if !ok {
-		return unknownProductResponse
+		noSpaces := strings.Replace(lowercaseProduct, " ", "", -1)
+		status, ok = nameToStatus[noSpaces]
+		if !ok {
+			return unknownProductResponse
+		}
 	}
 
 	switch status {
