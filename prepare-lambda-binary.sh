@@ -1,5 +1,5 @@
 set -x
 
-rm -rf alexa-picking-apples.zip
-GOOS=linux go build -o alexa-picking-apples -a -ldflags "-w -s -extldflags \"-static\"" -installsuffix cgo
-zip -r alexa-picking-apples.zip alexa-picking-apples
+rm -rf alexa-apple-guide.zip
+GOOS=linux go build -o alexa-apple-guide -a -ldflags "-w -s -extldflags \"-static\"" -installsuffix cgo
+zip -r alexa-apple-guide.zip alexa-apple-guide

@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/jaredririe/alexa-picking-apples/alexa"
-	"github.com/jaredririe/alexa-picking-apples/scraper"
+	"github.com/jaredririe/alexa-apple-guide/alexa"
+	"github.com/jaredririe/alexa-apple-guide/scraper"
 )
 
 var (
@@ -37,8 +37,8 @@ func handler(request alexa.Request) (alexa.Response, error) {
 	switch request.Body.Type {
 	case alexa.LaunchRequestType:
 		response = alexa.NewResponse(
-			"Picking Apples",
-			"Welcome to Picking Apples. You can ask me whether it's a good time to buy a particular Apple product. For example, you could ask 'is now a good time to buy the iMac?'",
+			"Apple Guide (Unofficial)",
+			"Welcome to the Unofficial Apple Guide. You can ask me whether it's a good time to buy a particular Apple product. For example, you could ask 'is now a good time to buy the iMac?'",
 			false,
 		)
 	case alexa.IntentRequestType:
