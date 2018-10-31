@@ -28,25 +28,25 @@ The MacRumors Buyer's Guide is located at https://buyersguide.macrumors.com/.
 ## Running locally
 
 ```
-$ go build && ./alexa-appleguide
+$ go build && ./alexa-apple-guide
 
-Name: imac pro Status: Neutral
-Name: apple watch Status: Updated
-Name: ipod touch Status: Caution
-Name: iphone xr Status: Updated
-Name: ipad Status: Neutral
 Name: imac Status: Outdated
-Name: airpods Status: Caution
-Name: macbook air Status: Outdated
-Name: macbook Status: Outdated
-Name: mac pro Status: Outdated
-Name: iphone xs Status: Updated
-Name: mac mini Status: Outdated
 Name: ipad mini Status: Outdated
-Name: apple tv Status: Caution
-Name: ipad pro Status: Outdated
+Name: ipad pro Status: Updated
+Name: iphone xr Status: Updated
 Name: homepod Status: Neutral
-Name: macbook pro Status: Updated
+Name: macbook Status: Outdated
+Name: ipod touch Status: Caution
+Name: ipad Status: Neutral
+Name: macbook air Status: Updated
+Name: iphone xs Status: Updated
+Name: apple tv Status: Caution
+Name: imac pro Status: Neutral
+Name: mac pro Status: Outdated
+Name: mac mini Status: Updated
+Name: airpods Status: Caution
+Name: apple watch Status: Updated
+Name: macbook pro Status: Neutral
 ```
 
 ## Preparing the binary to upload to the Lambda Management Console
